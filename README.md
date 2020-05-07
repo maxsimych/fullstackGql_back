@@ -1,2 +1,2 @@
 # threeLayerGql
-simple graphQl server with threeLayerArchitecture example
+Simple GraphQL server example with Three Layer architecture 
