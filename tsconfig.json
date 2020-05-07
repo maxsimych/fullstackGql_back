@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "removeComments": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "importsNotUsedAsValues": "error",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "noImplicitThis": true,
+    "strict": true,
+    "pretty": true,
+    "sourceMap": true,
+    "target": "ES2018",
+    "skipLibCheck": true,
+    "lib": [
+      "es2019"
+    ],
+    "outDir": "dist",
+    "baseUrl": "./",
+    "types": [
+      "reflect-metadata"
+    ],
+    "paths": {
+      "src/*": ["src/*"]
+    }
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "**/*.spec.ts"
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "name": "threeLayerGql",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "_moduleAliases": {
+    "src": "./src"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@octokit/graphql": "^4.3.1",
+    "apollo-server": "^2.13.0",
+    "apollo-server-express": "^2.13.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "graphql": "^15.0.0",
+    "module-alias": "^2.2.2",
+    "mongodb": "^3.5.7",
+    "mongoose": "^5.9.10",
+    "reflect-metadata": "^0.1.13",
+    "tsyringe": "^4.1.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.6",
+    "@types/express": "^4.17.6",
+    "@types/mongodb": "^3.5.14",
+    "@types/mongoose": "^5.7.14",
+    "typescript": "^3.8.3"
+  }
+}
