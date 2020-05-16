@@ -3,13 +3,13 @@ import { gql } from 'apollo-server-express';
 
 export const contactSchema = gql`
   type Query {
-    contacts: [Contact!]!
+    moreContacts(cursor: String): MoreContacts!
     contact(id: ID!): Contact
   }
 
   type Mutation {
     addContact(username: String!): Contact
-    deleteContact(id: ID!): Boolean!
+    deleteContact(id: ID!): ID!
     editContact(
       id: ID!
       name: String
@@ -20,6 +20,10 @@ export const contactSchema = gql`
     ): Contact
   }
 
+  type Subscription {
+    contactAdded: Contact!
+  }
+
   type Contact {
     id: ID!
     username: String!
@@ -28,5 +32,10 @@ export const contactSchema = gql`
     email: String
     name: String
     location: String
+  }
+
+  type MoreContacts {
+    cursor: String
+    contacts: [Contact!]!
   }
 `;

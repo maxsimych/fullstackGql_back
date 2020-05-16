@@ -1,9 +1,9 @@
-import type { Document, Model } from 'mongoose';
 import type { ObjectId } from 'mongodb';
 import type { DependencyContainer } from 'tsyringe';
-import type { Contact } from './contact.service';
+import type fetch from 'node-fetch';
+import type { ContactService } from './contact.service';
  
-export interface ICreatObj {
+export interface ICreateObj {
   username: string;
   bio?: string;
   name?: string;
@@ -14,22 +14,12 @@ export interface ICreatObj {
 
 export type ObjectIdConstructor = new (str: string) => ObjectId;
 
-export interface IContact extends Document {
-  username: string;
-  name?: string,
-  avatarUrl?: string,
-  bio?: string,
-  location?: string,
-  email?: string
-  createdAt?: Date,
-  updatedAt?: Date
-}
 
-export type IContactModel = Model<IContact>;
+export type FetchType = typeof fetch;
 
 export interface IContext {
   service: {
-    Contact: typeof Contact,
+    Contact: typeof ContactService,
   }
   container: DependencyContainer
 }
@@ -45,5 +35,9 @@ export interface IArgs {
   bio?: string;
   email?: string;
   location?: string;
+}
+
+export interface ICursor {
+  cursor?: string;
 }
 

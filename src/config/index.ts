@@ -1,6 +1,6 @@
 import dotenv from 'dotenv';
 
-const envFound = dotenv.config({ path: '../.env'});
+const envFound = dotenv.config();
 if (envFound.error) {
   throw new Error('env not found');
 }
