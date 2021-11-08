@@ -15,7 +15,7 @@
   "license": "ISC",
   "dependencies": {
     "@typegoose/typegoose": "^7.0.0",
-    "apollo-server": "^2.13.0",
+    "apollo-server": "^2.25.3",
     "apollo-server-express": "^2.13.0",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
